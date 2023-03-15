@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+class Alliance
+{
+public:
+void show_A()
+{
+cout<<"SAI NARAYAN";
+}
+};
+class School:
+public Alliance
+{
+public:
+void show_B()
+{
+cout<<"ACED ";
+}
+};
+class Department:
+public Alliance
+{
+public:
+void show_C()
+{
+cout<<"CSE ";
+}
+};
+class Batch:
+public Alliance
+{
+public:
+void show_D()
+{
+cout<<"2021-2025 ";
+}
+};
+class Section:
+public Alliance
+{
+public:
+void show_E()
+{
+cout<<"d-section ";
+}
+};
+int main()
+{
+School b;
+cout<<"calling from school aced"<<endl;b.show_A();
+}
+
