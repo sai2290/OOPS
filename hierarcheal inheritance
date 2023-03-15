@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class Alliance
+{
+public:
+char course[10];
+char branch[10];
+char sec[10];
+void getdata() {
+cout<< "course of student:\n";
+cout<< "branch of student:\n";
+cout<< "section of student:\n";
+cin>> course;
+cin>> branch;
+cin>> sec;
+}
+};
+class aced: public Alliance{
+public:
+void display()
+{
+cout<< "student from:" << course<<endl;
+}
+};
+class business : public Alliance
+{
+public:
+void display()
+{
+cout<< "student from:" << course;
+}
+};
+int main()
+{
+aced obj1;
+business obj2;
+obj1.getdata();
+obj1.display();
+obj2.getdata();
+return 0;
+}
