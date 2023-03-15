@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+#include <string.h>
+class alliance 
+{
+public:
+void show_A()
+{
+cout <<  "class A"<<endl;
+}
+};
+class ACED: public alliance
+{
+public:
+void show_B()
+{
+cout<<"class B"<<endl;
+}
+};
+class department : public Alliance
+{
+public:
+void show_C()
+{
+cout <<"class C"<<endl;}
+};
+int main()
+{
+ACED b;
+cout <<  "calling from B:  " <<endl;
+b.show_B();
+b.show_A();
+department c;
+cout <<"calling from C: " <<endl;
+c.show_c();
+c.show_A():
+return 0;
+}
