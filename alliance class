@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Alliance{
+public:
+Alliance()
+{
+cout << "THE STUDENTS OF ALLIANCE " << endl;
+}
+};
+class ACED {
+public:
+ACED() {
+cout << "the students of aced" << endl;
+}
+};
+class CSE: public Alliance, public ACED {
+public:
+CSE()
+{
+cout << "Constructor for class C" << endl;
+cout<<"Class C inherits from class A and class B" << endl;
+}
+};
+int main()
+{
+CSE obj;
+return 0;
+}
