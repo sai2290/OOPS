@@ -1,0 +1,121 @@
+#include <iostream> 
+
+//c++ program for multilevel inheritance 
+
+using namespace std; 
+
+class student//grand father class(base) 
+
+{ 
+
+   protected: int roll_num; 
+
+    public: 
+
+   void get_data(int a) 
+
+    { 
+
+        roll_num=a; 
+
+    } 
+
+   void  put_data() 
+
+    { 
+
+        cout<<"roll_num=  "<<roll_num<<endl; 
+
+    } 
+
+}; 
+
+class marks:public student//father class(intermediate base) 
+
+{ 
+
+   protected: 
+
+   int sub1; 
+
+    int sub2; 
+
+    public: 
+
+  void get_data(int a,int b) 
+
+    { 
+
+        sub1=a; 
+
+        sub2=b; 
+
+    } 
+
+ void put_data() 
+
+    { 
+
+        cout<<"sub1=  "<<sub1<<endl; 
+
+        cout<<"sub2=  "<<sub2<<endl; 
+
+    } 
+
+     
+
+}; 
+
+class total:public marks//child class 
+
+{ 
+
+    int tot; 
+
+    public: 
+
+     void get_data(int r,int a,int b) 
+
+    { 
+
+       student::get_data(r);//inherited from base class 
+
+        marks::get_data(a,b);//inheritated from intermediate base class 
+
+        tot=a+b; 
+
+        
+
+    } 
+
+ void put_data() 
+
+    { 
+
+       student::put_data(); 
+
+        marks::put_data(); 
+
+        cout<<"total ="<<tot<<endl; 
+
+    } 
+
+}; 
+
+ 
+
+int main() 
+
+{ 
+
+    total s1; 
+
+    s1.get_data(12,45,60); 
+
+    s1.put_data(); 
+
+ 
+
+    return 0; 
+
+}
